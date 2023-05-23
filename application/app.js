@@ -5,4 +5,5 @@ const cors = require('cors');
 app.use(express.json())
 app.use(cors());
 app.use(require('./router/server'))
-app.listen('8080', () => console.log('puerto iniciado 3000'))
+app.set('port',8090)
+app.listen(app.get('port'), () => console.log('servidor en el puerto :',app.get('port')))
